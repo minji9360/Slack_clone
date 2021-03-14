@@ -146,6 +146,7 @@ a:hover {
 button {
 	border: none;
 	background: transparent;
+	padding: 0
 }
 
 button:hover {
