@@ -1,59 +1,78 @@
-.header {
-    background-color: red;
-    /* grid-area: hd; */
+aside {
+    width: 236px;
+    background-color: yellow;
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: auto;
+    overflow: hidden;
+    position: relative;
+    grid-template-areas: "sidebar";
 }
 
 .sidebar {
-    background-color: yellow;
-    /* grid-area: sd; */
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    height: 716.4px; /* auto여야 하는데 안먹혀서 임시 지정 */
+}
+
+section {
+    background-color: blue;
+    grid-area: section;
+    grid-template-rows: auto;
+    grid-template-areas: "content-now";
     display: grid;
+    grid-template-columns: auto;
+    min-width: 0;
+    min-height: 0;
 }
 
 .content {
-    background-color: blue;
-    /* grid-area: main; */
-    grid-template-rows: auto;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    grid-area: content-now;
 }
 
-.p-client_container {
-    /* display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas: 
-      "hd hd hd hd hd hd hd hd hd"
-      "sd sd main main main main main main main"; */
-}
-
-.p-client {
+.container {
+    grid-template-columns: 236px auto;
+    grid-template-areas: "aside section";
+    grid-area: container;
     display: grid;
+    grid-template-rows: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
     grid-template-rows: 38px auto min-content;
     grid-template-columns: auto;
     grid-template-areas:
-        "p-client--iap1__top_nav"
-        "p-client__workspace"
-        "p-client__banners";
+        "header"
+        "container";
 }
 
-.p-top_nav {
-    background: #350d36;
-    color: #FFFFFF;
-    box-shadow: 0 1px 0 0 rgb(255 255 255 / 10%);
-    grid-area: p-client--iap1__top_nav;
+header {
+    background: #121016;
     min-width: 0;
     -webkit-app-region: drag;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
     z-index: 203;
+    grid-area: header;
 }
 
-.p-top_nav__sidebar {
+.header-empty {
     display: flex;
     flex: 1;
 }
 
-.p-top_nav__search__container {
+.header-search {
     min-width: 0;
     max-width: 500px;
     position: relative;
@@ -62,30 +81,31 @@
     display: flex;
 }
 
-.p-top_nav__search {
+.search {
     display: flex;
     align-items: center;
     flex: 5;
     height: 24px;
     -webkit-app-region: no-drag;
     background: rgba(255, 255, 255, 0.075);
-    box-shadow: inset 0 0 0 1px rgb(104 74 104);
+    box-shadow: inset 0 0 0 1px rgb(100, 100, 100);
     color: #FFFFFF;
     padding: 0 8px;
     border-radius: 4px;
+    opacity: .8;
 }
 
-.p-top_nav__search__container .p-top_nav__search__icon {
+.search .search__icon {
     display: none;
 }
 
-.p-top_nav__search__icon {
+.search__icon {
     font-size: 18px;
     transform: translateY(1px);
     opacity: .8;
 }
 
-.p-top_nav__search__text {
+.search__text {
     font-size: 13px;
     line-height: 1.38463;
     font-weight: 400;
@@ -102,23 +122,18 @@
     display: inline-flex;
     width: 22px;
     height: 22px;
-    align-items: center;
-    justify-content: center;
 }
 
-.p-top_nav__windows_controls_container {
-    margin-left: 16px;
-}
-
-.c-icon--question-circle {
+.header-help__icon {
     opacity: .8;
 }
 
-.p-top_nav_help {
+.header-help__button {
     padding-top: 4px;
+    margin-left: 16px;
 }
 
-.p-top_nav__right {
+.header-user {
     flex: 1;
     min-width: 128px;
     display: flex;
@@ -129,44 +144,39 @@
     position: relative;
 }
 
-.p-top_nav .p-ia__nav__user__button {
+.user {
     width: 28px;
     height: 28px;
 }
 
-.p-ia__nav__user {
-    display: inline-flex;
-    position: relative;
-}
-
-.p-ia__nav__user__avatar {
+.user-avatar {
     width: 28px;
 }
 
-.c-avatar__image {
+.user-avatar__image {
     border-radius: 4px;
     display: block;
     height: 100%!important;
     width: 100%!important;
 }
 
-.p-ia__nav__user__presence--stroke {
-    -webkit-text-stroke-color: #350d36;
+.user-online--stroke {
+    -webkit-text-stroke-color: #121016;
     bottom: -3.8px;
-    right: 4px;
+    right: 12px;
     position: absolute;
     -webkit-text-stroke: 6px rgba(var(--sk_foreground_min_solid,248,248,248),1);
-    background-color: #350d36;
+    background-color: #121016;
     border-radius: 10px;
     width: 14px;
     height: 14px;
 }
 
-.p-ia__nav__user__presence {
-    bottom: -21px;
-    right: 6.5px;
+.user-online {
+    bottom: 10px;
+    right: -12px;
     background-color: #2BAC76;
     border-radius: 10px;
-    width: 8.5px;
+    width: 8.8px;
     height: 8.5px;
 }
