@@ -1,6 +1,4 @@
 aside {
-    width: 236px;
-    background-color: yellow;
     grid-area: aside;
     display: grid;
     grid-template-rows: auto;
@@ -15,11 +13,64 @@ aside {
     flex-direction: column;
     min-height: 0;
     min-width: 0;
-    height: 716.4px; /* auto여야 하는데 안먹혀서 임시 지정 */
+    height: auto;
 }
 
+.sidebar-header {
+    position: relative;
+    background: #19171D;
+    display: flex;
+    align-items: stretch;
+    height: 64px;
+}
+
+.sidebar-header__button {
+    background-color: initial;
+    color: white;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 19px 0 16px;
+    transition-property: background-color,border-color;
+    transition-duration: 80ms;
+    transition-timing-function: cubic-bezier(.36,.19,.29,1);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.sidebar-header__team-name {
+    min-width: 0;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.down__image {
+    width: 12px;
+    height: 12px;
+    margin-left: 4.5px;
+}
+
+.sidebar-content {
+    height: auto;
+    height: calc(100vh - 38px - 64px);
+    min-height: 0;
+    width: 100%;
+    color: rgb(188,171,188);
+    background: #19171D;
+}
+
+/* .menu {
+    position: relative;
+    flex: 1;
+    background: #3F0E40;
+    color: rgb(188,171,188);
+} */
+
 section {
-    background-color: blue;
+    background-color: gray;
     grid-area: section;
     grid-template-rows: auto;
     grid-template-areas: "content-now";
@@ -37,10 +88,10 @@ section {
     grid-area: content-now;
 }
 
-.container {
+.main {
     grid-template-columns: 236px auto;
     grid-template-areas: "aside section";
-    grid-area: container;
+    grid-area: main;
     display: grid;
     grid-template-rows: auto;
     overflow: hidden;
@@ -54,7 +105,7 @@ section {
     grid-template-columns: auto;
     grid-template-areas:
         "header"
-        "container";
+        "main";
 }
 
 header {
@@ -65,6 +116,7 @@ header {
     align-items: center;
     z-index: 203;
     grid-area: header;
+    border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
 .header-empty {
