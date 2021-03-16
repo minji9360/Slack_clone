@@ -22,11 +22,12 @@ aside {
     display: flex;
     align-items: stretch;
     height: 64px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    cursor: pointer;
 }
 
 .sidebar-header__button {
     background-color: initial;
-    color: white;
     flex: 1;
     min-width: 0;
     display: flex;
@@ -35,10 +36,11 @@ aside {
     transition-property: background-color,border-color;
     transition-duration: 80ms;
     transition-timing-function: cubic-bezier(.36,.19,.29,1);
-    border-bottom: 1px solid rgba(255,255,255,.12);
+    /* border-bottom: 1px solid rgba(255,255,255,.12); */
 }
 
 .sidebar-header__team-name {
+    color: #FFE9E8;
     min-width: 0;
     font-weight: 900;
     text-overflow: ellipsis;
@@ -51,6 +53,24 @@ aside {
     width: 12px;
     height: 12px;
     margin-left: 4.5px;
+}
+
+.write__button {
+    width: 35px;
+    height: 35px;
+    background-color: #FFE9E8;
+    border-radius: 17.5px;
+    top: 14px;
+    right: 16px;
+    position: absolute;
+}
+
+.write_image {
+    width : 17px;
+    height: 17px;
+    top: 8px;
+    left: 8.5px;
+    position: relative;
 }
 
 .sidebar-content {
@@ -140,7 +160,7 @@ header {
     height: 24px;
     -webkit-app-region: no-drag;
     background: rgba(255, 255, 255, 0.075);
-    box-shadow: inset 0 0 0 1px rgb(100, 100, 100);
+    box-shadow: inset 0 0 0 1px rgba(255,194,192, 0.4);
     color: #FFFFFF;
     padding: 0 8px;
     border-radius: 4px;
@@ -167,6 +187,7 @@ header {
     white-space: nowrap;
     opacity: .8;
     margin-right: auto;
+    color: #FFC2C0;
 }
 
 .icon {
@@ -227,7 +248,7 @@ header {
 .user-online {
     bottom: 10px;
     right: -12px;
-    background-color: #2BAC76;
+    background-color: #FFA95A;
     border-radius: 10px;
     width: 8.8px;
     height: 8.5px;
