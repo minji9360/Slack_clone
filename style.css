@@ -18,7 +18,7 @@ aside {
 
 .sidebar-header {
     position: relative;
-    background: #19171D;
+    background: #1A1D21;
     display: flex;
     align-items: stretch;
     height: 64px;
@@ -79,7 +79,7 @@ aside {
     min-height: 0;
     width: 100%;
     color: rgb(188,171,188);
-    background: #19171D;
+    background: #1A1D21;
 }
 
 /* .menu {
@@ -129,7 +129,7 @@ section {
 }
 
 header {
-    background: #121016;
+    background: #1A1D21;
     min-width: 0;
     -webkit-app-region: drag;
     display: flex;
@@ -202,7 +202,7 @@ header {
 }
 
 .header-help__button {
-    padding-top: 4px;
+    padding-top: 5px;
     margin-left: 16px;
 }
 
@@ -234,12 +234,12 @@ header {
 }
 
 .user-online--stroke {
-    -webkit-text-stroke-color: #121016;
+    -webkit-text-stroke-color: #1A1D21;
     bottom: -3.8px;
     right: 12px;
     position: absolute;
     -webkit-text-stroke: 6px rgba(var(--sk_foreground_min_solid,248,248,248),1);
-    background-color: #121016;
+    background-color: #1A1D21;
     border-radius: 10px;
     width: 14px;
     height: 14px;
