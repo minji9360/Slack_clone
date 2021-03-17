@@ -60,6 +60,12 @@ header {
     opacity: .8;
 }
 
+.search:hover {
+    background: rgba(255, 255, 255, 0.085);
+    box-shadow: inset 0 0 0 1px rgba(255,194,192, 0.6);
+    opacity: 1;
+}
+
 .search .search__icon {
     display: none;
 }
@@ -78,9 +84,9 @@ header {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    opacity: .8;
+    opacity: .9;
     margin-right: auto;
-    color: #FFC2C0;
+    color: #ffcbca;
 }
 
 .header-help__icon {
@@ -179,7 +185,10 @@ aside {
     transition-property: background-color,border-color;
     transition-duration: 80ms;
     transition-timing-function: cubic-bezier(.36,.19,.29,1);
-    /* border-bottom: 1px solid rgba(255,255,255,.12); */
+}
+
+.sidebar-header__button:hover {
+    background: #3B3232;
 }
 
 .sidebar-header__team-name {
@@ -240,21 +249,33 @@ aside {
     position: relative;
 }
 
+.menu__button:hover {
+    background: #3B3232;
+}
+
 .menu__img, .menu__img--click {
     width: 17px;
     position: relative;
-    top: 3px;
+    top: 2px;
     margin-right: 4px;
 }
 
 .menu-saved img {
     width: 18px;
-    top: 4px;
     left: -1px;
 }
 
-.channels__button, .direct__button {
-    margin-left: 15px;
+.menu-saved span {
+    position: relative;
+    top: -1px;
+}
+
+.channels__button {
+    padding-left: 31px;
+}
+
+.direct__button {
+    padding-left: 26px;
 }
 
 .pound {
@@ -272,7 +293,7 @@ aside {
 .direct__text {
     position: absolute;
     top: 7px;
-    left: 43px;
+    left: 54px;
 }
 
 
