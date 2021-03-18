@@ -253,6 +253,11 @@ aside {
     background: #3B3232;
 }
 
+.menu__button.click {
+    background: #FFC2C0;
+    color: #1A1D21;
+}
+
 .menu__img, .menu__img--click {
     width: 17px;
     position: relative;
