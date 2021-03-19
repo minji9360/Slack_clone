@@ -265,6 +265,16 @@ aside {
     margin-right: 4px;
 }
 
+.slide__img {
+    -webkit-transition:width .5s, height .5s, background-color .5s, -webkit-transform .5s;
+    transition:width .5s, height .5s, background-color .5s, transform .5s;
+}
+
+.slide__img.close {
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+
 .menu-saved img {
     width: 18px;
     left: -1px;
